@@ -1,18 +1,34 @@
-import { Label } from './label';
-import { Input, InputProps } from './input';
+import {
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
 
 type InputBoxProps = {
   label: string;
   id: string;
   type: string;
+  form: any;
 };
 
-const InputBox = ({ label, id, type }: InputBoxProps) => {
+const InputBox = ({ label, id, type, form }: InputBoxProps) => {
   return (
-    <div className="grid w-full items-center gap-2.5">
-      <Label htmlFor={id}>{label}</Label>
-      <Input type={type} id={id} placeholder={label} />
-    </div>
+    <FormField
+      control={form.control}
+      name={id}
+      render={({ field }) => (
+        <FormItem className="w-full">
+          <FormLabel>{label}</FormLabel>
+          <FormControl>
+            <Input type={type} placeholder={label} {...field} />
+          </FormControl>
+          <FormMessage />
+        </FormItem>
+      )}
+    />
   );
 };
 

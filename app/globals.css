@@ -18,7 +18,7 @@
     --muted-foreground: 217.9 10.6% 64.9%;
     --accent: 215 27.9% 16.9%;
     --accent-foreground: 210 20% 98%;
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 350 85% 64%;
     --destructive-foreground: 210 20% 98%;
     --border: 215 27.9% 16.9%;
     --input: 215 16% 40%;
@@ -53,7 +53,7 @@
   select:-webkit-autofill:hover,
   select:-webkit-autofill:focus {
     -webkit-text-fill-color: #f9fafb;
-    -webkit-box-shadow: 0 0 0px 1000px #1f1c31 inset;
+    -webkit-box-shadow: 0 0 0px 1000px #00000000 inset;
     transition: background-color 5000s ease-in-out 0s;
   }
 }
